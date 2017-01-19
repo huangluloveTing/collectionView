@@ -22,7 +22,7 @@
     if (!_collectionView) {
         CustomWaterfallLayout *layout = [[CustomWaterfallLayout alloc] init];
         _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
-        _collectionView.backgroundColor = [UIColor yellowColor];
+        _collectionView.backgroundColor = [UIColor whiteColor];
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
         [_collectionView registerClass:[CustomCollectionViewCell class] forCellWithReuseIdentifier:@"col_cell"];
@@ -38,15 +38,16 @@
     [self.view addSubview:self.collectionView];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - delegate and datasource
+
+- (NSInteger) numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    
+    return 3;
 }
 
-#pragma mark - delegate and datasource
 - (NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
-    return 100;
+    return 5;
 }
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {

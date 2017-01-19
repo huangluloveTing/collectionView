@@ -43,7 +43,7 @@
  * 这个方法的返回值决定了rect范围内所有元素的排布（frame）
  * 一个cell对应一个UICollectionViewLayoutAttributes对象
  */
--(NSArray<UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect {
+-(NSArray<UICollectionViewLayoutAttributes *> *) layoutAttributesForElementsInRect:(CGRect)rect {
     
     //取出父类算出的布局属性
     NSArray *attsArray = [super layoutAttributesForElementsInRect:rect];

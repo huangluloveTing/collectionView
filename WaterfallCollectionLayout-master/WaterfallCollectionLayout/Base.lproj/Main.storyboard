@@ -39,6 +39,11 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="I0i-8z-7xv">
+                        <barButtonItem key="leftBarButtonItem" title="left" id="4lw-iz-Gv0">
+                            <connections>
+                                <segue destination="nF3-gy-tOF" kind="show" id="E6C-ck-Qox"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" id="eEP-jZ-C3w">
                             <connections>
                                 <segue destination="ZSC-7C-MR6" kind="show" id="YM6-jD-I6f"/>
@@ -49,6 +54,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cRW-oe-Z6B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="150" y="439"/>
+        </scene>
+        <!--Scan Photo View Controller-->
+        <scene sceneID="KyJ-6e-XZZ">
+            <objects>
+                <viewController id="nF3-gy-tOF" customClass="ScanPhotoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Tft-zp-Cz2"/>
+                        <viewControllerLayoutGuide type="bottom" id="fPA-eJ-05g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fxq-tL-9eo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1UG-HA-R2i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1121" y="236"/>
         </scene>
         <!--Custom View Controller-->
         <scene sceneID="hJ7-79-F7I">

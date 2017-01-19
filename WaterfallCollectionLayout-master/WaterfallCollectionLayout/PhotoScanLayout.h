@@ -1,5 +1,5 @@
 //
-//  CustomCollectionViewCell.h
+//  PhotoScanLayout.h
 //  WaterfallCollectionLayout
 //
 //  Created by 黄露 on 2017/1/19.
@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CustomCollectionViewCell : UICollectionViewCell
-
-@end
-
-@interface CustomHeader : UICollectionReusableView
+@interface PhotoScanLayout : UICollectionViewFlowLayout
 
 @end

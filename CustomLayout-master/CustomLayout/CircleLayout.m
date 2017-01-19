@@ -49,6 +49,8 @@
     CGFloat circleX = self.collectionView.frame.size.width / 2;
     CGFloat circleY = self.collectionView.frame.size.height / 2;
     
+    
+    //初始化一个布局属性
     UICollectionViewLayoutAttributes *attrs = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
     attrs.size = CGSizeMake(60, 60);
     //如果还剩下一个cell

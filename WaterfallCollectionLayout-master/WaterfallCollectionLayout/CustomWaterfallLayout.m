@@ -64,6 +64,7 @@
     return CGSizeMake(self.collectionView.frame.size.width, [longest floatValue]);
 }
 
+//给indexPath 对应的cell 添加attribute
 - (UICollectionViewLayoutAttributes *) layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath {
     //初始化一个attribute
     UICollectionViewLayoutAttributes *attributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
@@ -110,9 +111,20 @@
     return mutalArr;
 }
 
+
+- (UICollectionViewLayoutAttributes *)layoutAttributesForSupplementaryViewOfKind:(NSString *)elementKind atIndexPath:(NSIndexPath *)indexPath {
+    
+    UICollectionViewLayoutAttributes *att = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
+    
+    att.frame = CGRectMake(0, 0, self.collectionView.frame.size.width, 50);
+    
+    return att;
+}
+
 - (BOOL) shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds {
     
-    return YES;
+    //当滚动时，是否刷新collectionView
+    return NO;
 }
 
 @end

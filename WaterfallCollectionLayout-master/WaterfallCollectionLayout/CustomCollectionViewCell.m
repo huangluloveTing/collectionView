@@ -11,3 +11,15 @@
 @implementation CustomCollectionViewCell
 
 @end
+
+@implementation CustomHeader
+
+- (instancetype) initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
+        self.backgroundColor = [UIColor redColor];
+    }
+    
+    return self;
+}
+
+@end
