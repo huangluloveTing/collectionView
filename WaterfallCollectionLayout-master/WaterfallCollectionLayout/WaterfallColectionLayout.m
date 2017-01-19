@@ -44,7 +44,7 @@
 }
 -(UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    //取出每个item 的attribute
+    //初始化一个attributes
     UICollectionViewLayoutAttributes* attr = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
     
     //高度最小值
