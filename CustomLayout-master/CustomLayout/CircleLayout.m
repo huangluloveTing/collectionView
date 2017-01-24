@@ -67,6 +67,21 @@
     return attrs;
 }
 
+- (UICollectionViewLayoutAttributes *)initialLayoutAttributesForAppearingItemAtIndexPath:(NSIndexPath *)itemIndexPath {
+    UICollectionViewLayoutAttributes *att = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:itemIndexPath];
+    att.alpha = 0.0;
+    att.center = self.collectionView.center;
+    return att;
+}
+
+- (UICollectionViewLayoutAttributes *)finalLayoutAttributesForDisappearingItemAtIndexPath:(NSIndexPath *)itemIndexPath {
+    UICollectionViewLayoutAttributes *att = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:itemIndexPath];
+    att.alpha = 0;
+    att.center = self.collectionView.center;
+    att.transform3D = CATransform3DMakeScale(0.1, 0.10, 0.1);
+    return att;
+    
+}
 
 -(NSMutableArray *)attrsArray {
     
